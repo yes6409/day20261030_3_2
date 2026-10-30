@@ -1,0 +1,24 @@
+[project]
+name = "20261030-3-2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "정원태", email = "a86151632@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = ["langchain-core", "langchain-ollama"]
+
+[project.scripts]
+20261030-3-2 = "20261030_3_2:main"
+ex02 = "ex02:main"
+ex03 = "ex03:main"
+
+[build-system]
+requires = ["uv_build>=0.12.12,<0.13.0"]
+build-backend = "uv_build"
+
+
+[tool.uv.build-backend]
+module-root = "src"
+module-name = ["ex02", "shared"]
